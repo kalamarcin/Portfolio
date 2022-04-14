@@ -1,6 +1,6 @@
 @import './tokens';
 
-    
+
 html {
 
     font-family: $font-famili-1
@@ -11,19 +11,10 @@ body {
 }
 
 .nav {
-    position: sticky;
-    top: 0;
-    background-color: $color-main;
-    height: 75px;
-    left: 0;
-    right: 0;
+    @include navNameMixin;
 
     .list-nav {
-        text-align: center;
-        margin: 0;
-        padding: 0;
-        font-size: $font-size-m;
-        
+        @include navListNameMixin;
 
         .nav-li {
             display: inline-block;
@@ -54,30 +45,17 @@ body {
 }
 
 .picture {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 35%;
-    height: 35%;
-    border-radius: 50%;
-
+    @include pictureNameMixin;
 }
 
 .main-div {
-    font-size: $font-size-l;
-    text-align: center;
-    color: $font-color-1;
-    margin-top: 50px;
-    margin-left: 20%;
-    margin-right: 20%;
-    margin-bottom: 50px;
+    @include MainDivNameMixin;
+
 }
 
 .main-header {
-    font-size: $font-size-xl;
-    padding-top: 70px;
-    margin-bottom: 30px;
-    text-align: center;
+    @include mainHeaderNameMixin ;
+    
 }
 
 .button {
@@ -86,40 +64,27 @@ body {
 }
 
 .main-button {
-    font-size: $font-size-m;
-    background-color: transparent;
-    border: 2px solid $color-main;
-    padding: 20px 40px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    margin-top: 25px;
-    margin-bottom: 100px;
-    cursor: pointer;
-
+    @include mainButtonNameMixin;
+    
 }
 
 .portfolioSection {
-    padding-top: 150px;
-    padding-bottom: 100px;
-    background-color: rgb(245, 236, 227);
-    background-size: cover;
+    @include portfolioSectionNameMixin;
 
 }
 
 .napisPortfolio {
-font-size: $font-size-l;
+    font-size: $font-size-l;
 
 }
 
 .header-title {
-
-    text-align: center;
-    font-size: $font-size-xl;
-    margin: 50px;
+    @include headerTitleNameMixin;
+    
 }
 
 .main-grid {
+    @include mainGridNameMixin;
     margin-top: 50px;
     margin-left: 10%;
     margin-right: 10%;
@@ -162,6 +127,7 @@ font-size: $font-size-l;
 
 
 input[type="text"i] {
+    @include inputNameMixin;
     height: 25px;
     width: 50%;
     margin: 10px;
@@ -179,16 +145,17 @@ input[type="text"i] {
 }
 
 textarea {
+    @include textareaNameMixin;
     margin: 10px;
     width: 50%;
     height: 200px;
     padding: 10px;
     font-size: $font-size-m;
     font-family: $font-famili-1
-
 }
 
 .social-footer {
+    @include socialFooterNameMixin;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -197,16 +164,16 @@ textarea {
 
     .fab {
         color: $color-main;
-        
+
 
         &:visited {
             text-decoration: none;
         }
 
         &:hover {
-            color:rgb(173, 147, 0);
+            color: rgb(173, 147, 0);
 
-    
+
         }
     }
 

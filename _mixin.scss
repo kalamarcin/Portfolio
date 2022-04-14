@@ -7,14 +7,36 @@
     height: 75px;
     left: 0;
     right: 0;
-}
 
-@mixin navListNameMixin {
-    text-align: center;
+    &--list-nav {
+        text-align: center;
         margin: 0;
         padding: 0;
         font-size: $font-size-m;
+
+        &--nav-li {
+            display: inline-block;
+            width: 25%;
+            margin-right: -4px;
+
+            &--a {
+                color: white;
+                text-decoration: none;
+                display: inline-block;
+                padding: 26px;
+
+                &:hover {
+                    text-decoration: none;
+                }
+
+                &:visited {
+                    text-decoration: none;
+                }
+            }
+        }
+    }
 }
+
 
 @mixin pictureNameMixin {
     display: block;
@@ -49,11 +71,77 @@
     padding-bottom: 100px;
     background-color: rgb(245, 236, 227);
     background-size: cover;
-    
+
 }
 
 @mixin headerTitleNameMixin {
     text-align: center;
     font-size: $font-size-xl;
     margin: 50px;
+}
+
+@mixin mainGridNameMixin {
+    margin-top: 50px;
+    margin-left: 10%;
+    margin-right: 10%;
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    grid-template-rows: repeat(3, auto);
+    grid-gap: none;
+}
+
+@mixin gridImgNameMixin {
+    width: 100%;
+
+    &:hover {
+        transform: scale(1.3);
+        transition-duration: 1800ms;
+        cursor: pointer;
+    }
+}
+
+@mixin divKontaktNameMixin {
+    text-align: center;
+    margin: 50px;
+    padding-top: 40px;
+    font-size: $font-size-l;
+}
+
+@mixin inputNameMixin {
+    height: 25px;
+    width: 50%;
+    margin: 10px;
+    padding: 10px;
+    font-size: $font-size-m;
+}
+
+@mixin textareaNameMixin {
+    margin: 10px;
+    width: 50%;
+    height: 200px;
+    padding: 10px;
+    font-size: $font-size-m;
+    font-family: $font-famili-1
+}
+
+@mixin socialFooterNameMixin {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 33%;
+    margin-right: 33%;
+
+    &--fab {
+        color: $color-main;
+
+        &:visited {
+            text-decoration: none;
+        }
+
+        &:hover {
+            color: rgb(173, 147, 0);
+
+
+        }
+    }
 }
